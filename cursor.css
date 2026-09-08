@@ -3,7 +3,11 @@
   * {
     cursor: none !important;
   }
-
+/* ===== Magnetic Buttons ===== */
+.magnetic {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
   .cursor-dot,
   .cursor-ring {
     position: fixed;

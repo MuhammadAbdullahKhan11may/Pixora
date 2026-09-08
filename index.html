@@ -47,7 +47,7 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </button>
-        <button class="navbar__signin">Sign In</button>
+       <button class="navbar__signin magnetic">Sign In</button>
 
         <button class="navbar__toggle" id="navToggle" aria-label="Menu">
           <span></span>
@@ -59,12 +59,13 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero" id="home">
-    <div class="hero__overlay"></div>
+<header class="hero" id="home">
+  <img src="assets/images/hero-image.png" alt="" class="hero__bg-img" data-parallax="0.15">
+  <div class="hero__overlay"></div>
 
     <div class="hero__content">
       <p class="hero__eyebrow">Discover. Explore. Download.</p>
-      <h1 class="hero__title">Stunning Photography<br>for a More Inspired You</h1>
+      <h1 class="hero__title text-reveal--immediate">Stunning Photography<br>for a More Inspired You</h1>
       <p class="hero__subtext">
         Explore a curated collection of high-quality photos and videos from around the world.
         Find your next favorite photo or video.
@@ -116,7 +117,7 @@
 
  <!-- Features Section -->
 <section class="features" id="featured">
-  <video class="features__video" autoplay muted loop playsinline>
+  <video class="features__video" data-parallax="0.15" autoplay muted loop playsinline>
     <source src="assets/videos/video features section pixora.mp4" type="video/mp4">
   </video>
   <div class="features__overlay"></div>
@@ -128,7 +129,7 @@
       <span class="features__eyebrow-line"></span>
     </div>
 
-    <h2 class="features__title">Visuals, without limits.</h2>
+    <h2 class="features__title text-reveal">Visuals, without limits.</h2>
     <p class="features__subtext">
       Curated, high-quality photos and videos from around the world — made for explorers, creators and dreamers like you.
     </p>
@@ -677,7 +678,7 @@
       <div class="category__info">
         <div>
           <h3 class="category__name">People</h3>
-          <span class="category__count">9.7K visuals</span>
+          <span class="category__count" data-count-target="9.7" data-count-decimals="1" data-count-suffix="K visuals">0 visuals</span>
         </div>
         <div class="category__bottom">
           <p class="category__desc">Real moments.<br>Extraordinary stories.</p>
@@ -697,7 +698,7 @@
 <!-- About Section -->
 <section class="about" id="about">
   <div class="about__bg">
-    <img src="assets/images/about image.png" alt="Macro shot of moss, berries and a small flower on a tree trunk" class="about__bg-img">
+   <img src="assets/images/about image.png" alt="Macro shot of moss, berries and a small flower on a tree trunk" class="about__bg-img" data-parallax="0.15">
     <div class="about__bg-overlay"></div>
   </div>
 
@@ -709,10 +710,10 @@
       06 / About Pixora
     </p>
 
-    <h2 class="about__title">
-      Built for<br>
-      <span class="about__title-muted">Visual Discovery.</span>
-    </h2>
+    <h2 class="about__title text-reveal">
+  Built for<br>
+  <span class="about__title-muted">Visual Discovery.</span>
+</h2>
 
     <p class="about__text">
       Pixora brings remarkable photography and video together in one place.
@@ -740,7 +741,6 @@
           <rect x="14" y="14" width="7" height="7"></rect>
         </svg>
         <span class="about__stat-number" data-count-target="50" data-count-suffix="+">0</span>
-<span class="about__stat-label">Categories</span>
         <span class="about__stat-label">Categories</span>
       </div>
 
@@ -786,25 +786,25 @@
 
   <div class="explore__content">
     <p class="explore__eyebrow">07 / Explore</p>
-    <h2 class="explore__title">
-      There's more<br>
-      <span class="explore__title-muted">to discover.</span>
-    </h2>
+    <h2 class="explore__title text-reveal">
+  There's more<br>
+  <span class="explore__title-muted">to discover.</span>
+</h2>
     <p class="explore__subtext">
       Thousands of moments.<br>
       One place to explore them.
     </p>
 
     <div class="explore__actions">
-      <a href="#" class="explore__btn explore__btn--solid">
-        Explore Photos
+      <a href="#" class="explore__btn explore__btn--solid magnetic">
+  Explore Photos
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12 5 19 12 12 19"></polyline>
         </svg>
       </a>
-      <a href="#" class="explore__btn explore__btn--outline">
-        Explore Videos
+      <a href="#" class="explore__btn explore__btn--outline magnetic">
+  Explore Videos
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12 5 19 12 12 19"></polyline>
@@ -880,17 +880,17 @@
 
   <div class="site-footer__hero">
     <p class="site-footer__eyebrow">Get in Touch</p>
-    <h2 class="site-footer__title">
-      Let's create<br>
-      <span class="site-footer__title-muted">a more visual world.</span>
-    </h2>
+    <h2 class="site-footer__title text-reveal">
+  Let's create<br>
+  <span class="site-footer__title-muted">a more visual world.</span>
+</h2>
     <p class="site-footer__subtext">
       Have a question, collaboration idea, or just want to say hello?<br>
       We'd love to hear from you.
     </p>
 
-    <a href="#" class="site-footer__cta">
-      Contact Us
+    <a href="#" class="site-footer__cta magnetic">
+  Contact Us
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <line x1="5" y1="12" x2="19" y2="12"></line>
         <polyline points="12 5 19 12 12 19"></polyline>

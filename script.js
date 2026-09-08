@@ -277,3 +277,100 @@ if (countEls.length) {
 
   countEls.forEach(el => countObserver.observe(el));
 }
+/* ===== Magnetic Buttons ===== */
+const magneticEls = document.querySelectorAll('.magnetic');
+const magneticRadius = 70;   // extra px of "pull field" beyond the button edges
+const magneticStrength = 0.35;
+
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  window.addEventListener('mousemove', (e) => {
+    magneticEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const dx = e.clientX - centerX;
+      const dy = e.clientY - centerY;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const maxDistance = Math.max(rect.width, rect.height) / 2 + magneticRadius;
+
+      if (distance < maxDistance) {
+        const pull = 1 - distance / maxDistance;
+        el.style.transform = `translate(${dx * magneticStrength * pull}px, ${dy * magneticStrength * pull}px)`;
+      } else {
+        el.style.transform = 'translate(0, 0)';
+      }
+    });
+  });
+}
+/* ===== Parallax Backgrounds ===== */
+const parallaxEls = document.querySelectorAll('[data-parallax]');
+
+function updateParallax() {
+  parallaxEls.forEach(el => {
+    const speed = parseFloat(el.getAttribute('data-parallax')) || 0.15;
+    const section = el.closest('section, header');
+    if (!section) return;
+    const rect = section.getBoundingClientRect();
+    const offset = rect.top * speed;
+    el.style.transform = `translateY(${offset}px)`;
+  });
+  requestAnimationFrame(updateParallax);
+}
+requestAnimationFrame(updateParallax);
+/* ===== Text Reveal (word-by-word) ===== */
+function splitTextReveal(el) {
+  const html = el.innerHTML;
+  const parts = html.split(/(<br\s*\/?>|<span[^>]*>|<\/span>)/gi);
+  let wordIndex = 0;
+  let insideSpan = false;
+
+  const rebuilt = parts.map(part => {
+    if (/^<br\s*\/?>$/i.test(part)) return part;
+    if (/^<span[^>]*>$/i.test(part)) { insideSpan = true; return part; }
+    if (/^<\/span>$/i.test(part)) { insideSpan = false; return part; }
+
+    return part.split(' ').filter(w => w.length).map(word => {
+      wordIndex++;
+      return `<span class="text-reveal__word"><span class="text-reveal__word-inner" style="transition-delay:${(wordIndex - 1) * 0.06}s">${word}</span></span>`;
+    }).join(' ');
+  }).join('');
+
+  el.innerHTML = rebuilt;
+}
+
+document.querySelectorAll('.text-reveal, .text-reveal--immediate').forEach(splitTextReveal);
+
+// Hero title — reveals immediately on load
+document.querySelectorAll('.text-reveal--immediate').forEach(el => {
+  setTimeout(() => el.classList.add('is-revealed'), 150);
+});
+
+// All other headlines — reveal on scroll into view
+const textRevealEls = document.querySelectorAll('.text-reveal');
+if (textRevealEls.length) {
+  const textRevealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        textRevealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  textRevealEls.forEach(el => textRevealObserver.observe(el));
+}
+/* ===== Category — scroll-triggered entrance ===== */
+const categorySection = document.querySelector('.category');
+
+if (categorySection) {
+  const categoryObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        categorySection.classList.add('is-visible');
+        categoryObserver.unobserve(categorySection);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  categoryObserver.observe(categorySection);
+}
