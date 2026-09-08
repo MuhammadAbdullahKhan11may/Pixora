@@ -21,8 +21,14 @@
   <link rel="stylesheet" href="explore.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="cursor.css">
+  <link rel="stylesheet" href="intro/intro.css">
 </head>
 <body>
+  <div class="intro" id="intro" role="status" aria-live="polite" aria-label="Loading">
+  <div class="intro__bar-track">
+    <div class="intro__bar-fill" id="introBarFill"></div>
+  </div>
+</div>
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="cursor-ring" id="cursorRing"></div>
   <!-- Navbar -->
@@ -988,5 +994,6 @@
 
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="script.js"></script>
+  <script src="intro/intro.js"></script>
 </body>
 </html>
