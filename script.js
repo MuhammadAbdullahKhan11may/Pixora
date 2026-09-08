@@ -120,3 +120,18 @@ const updateTrendState = () => {
 trendTrack.addEventListener('scroll', updateTrendState);
 window.addEventListener('load', updateTrendState);
 window.addEventListener('resize', updateTrendState);
+/* ===== Features Section — scroll-triggered entrance ===== */
+const featuresSection = document.querySelector('.features');
+
+if (featuresSection) {
+  const featuresObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        featuresSection.classList.add('is-visible');
+        featuresObserver.unobserve(featuresSection);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  featuresObserver.observe(featuresSection);
+}
