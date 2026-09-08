@@ -150,3 +150,130 @@ if (featuredPhotoSection) {
 
   featuredPhotoObserver.observe(featuredPhotoSection);
 }
+/* ===== Custom Cursor ===== */
+const cursorDot = document.getElementById('cursorDot');
+const cursorRing = document.getElementById('cursorRing');
+
+if (cursorDot && cursorRing && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  let mouseX = 0, mouseY = 0;
+  let ringX = 0, ringY = 0;
+
+  // Dot follows instantly
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursorDot.style.left = `${mouseX}px`;
+    cursorDot.style.top = `${mouseY}px`;
+  });
+
+  // Ring follows with lag (lerp)
+  const animateRing = () => {
+    ringX += (mouseX - ringX) * 0.15;
+    ringY += (mouseY - ringY) * 0.15;
+    cursorRing.style.left = `${ringX}px`;
+    cursorRing.style.top = `${ringY}px`;
+    requestAnimationFrame(animateRing);
+  };
+  animateRing();
+
+  // Press feedback
+  window.addEventListener('mousedown', () => cursorRing.classList.add('is-clicking'));
+  window.addEventListener('mouseup', () => cursorRing.classList.remove('is-clicking'));
+
+  // Hover state on interactive elements
+  const hoverTargets = 'a, button, .trending__card, .featured-photography__item, .category__card, input, textarea';
+
+  document.addEventListener('mouseover', (e) => {
+    if (e.target.closest(hoverTargets)) {
+      cursorRing.classList.add('is-hovering');
+      cursorDot.classList.add('is-hovering');
+    }
+  });
+
+  document.addEventListener('mouseout', (e) => {
+    if (e.target.closest(hoverTargets)) {
+      cursorRing.classList.remove('is-hovering');
+      cursorDot.classList.remove('is-hovering');
+    }
+  });
+
+  // Hide cursor when leaving the window
+  document.addEventListener('mouseleave', () => {
+    cursorDot.style.opacity = '0';
+    cursorRing.style.opacity = '0';
+  });
+  document.addEventListener('mouseenter', () => {
+    cursorDot.style.opacity = '1';
+    cursorRing.style.opacity = '1';
+  });
+}
+/* ===== Lenis Smooth Scroll ===== */
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easeOutExpo
+  smoothWheel: true,
+  wheelMultiplier: 1,
+  touchMultiplier: 1.5,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+// Make anchor links (navbar, footer, etc.) use Lenis's eased scroll
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const targetId = link.getAttribute('href');
+    if (targetId.length > 1) {
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        lenis.scrollTo(target, { offset: -90, duration: 1.4 });
+      }
+    }
+  });
+});
+/* ===== Number Counters ===== */
+const countEls = document.querySelectorAll('[data-count-target]');
+
+const animateCount = (el) => {
+  const target = parseFloat(el.getAttribute('data-count-target'));
+  const decimals = parseInt(el.getAttribute('data-count-decimals') || '0', 10);
+  const suffix = el.getAttribute('data-count-suffix') || '';
+  const duration = 1800;
+  const startTime = performance.now();
+
+  const easeOutExpo = (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
+
+  const tick = (now) => {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeOutExpo(progress);
+    const current = target * eased;
+
+    el.textContent = `${current.toFixed(decimals)}${suffix}`;
+
+    if (progress < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      el.textContent = `${target.toFixed(decimals)}${suffix}`;
+    }
+  };
+
+  requestAnimationFrame(tick);
+};
+
+if (countEls.length) {
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        countObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  countEls.forEach(el => countObserver.observe(el));
+}

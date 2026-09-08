@@ -20,9 +20,11 @@
   <link rel="stylesheet" href="about.css">
   <link rel="stylesheet" href="explore.css">
   <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="cursor.css">
 </head>
 <body>
-
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
   <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar__container">
@@ -95,13 +97,13 @@
     <div class="hero__footer">
       <div class="hero__stats">
         <div class="hero__stat">
-          <span class="hero__stat-number">10K+</span>
-          <span class="hero__stat-label">High-Quality Photos</span>
-        </div>
-        <div class="hero__stat">
-          <span class="hero__stat-number">50+</span>
-          <span class="hero__stat-label">Photos & videos for every inspiration.</span>
-        </div>
+  <span class="hero__stat-number" data-count-target="10" data-count-suffix="K+">0</span>
+  <span class="hero__stat-label">High-Quality Photos</span>
+</div>
+<div class="hero__stat">
+  <span class="hero__stat-number" data-count-target="50" data-count-suffix="+">0</span>
+  <span class="hero__stat-label">Photos & videos for every inspiration.</span>
+</div>
         <div class="hero__stat">
           <span class="hero__stat-number">Free</span>
           <span class="hero__stat-label">To Download</span>
@@ -517,7 +519,7 @@
       <div class="category__info">
         <div>
           <h3 class="category__name">Nature</h3>
-          <span class="category__count">12.4K visuals</span>
+          <span class="category__count" data-count-target="12.4" data-count-decimals="1" data-count-suffix="K visuals">0 visuals</span>
         </div>
         <div class="category__bottom">
           <p class="category__desc">Mountains, forests, lakes<br>and everything in between.</p>
@@ -537,7 +539,7 @@
       <div class="category__info">
         <div>
           <h3 class="category__name">Architecture</h3>
-          <span class="category__count">8.1K visuals</span>
+          <span class="category__count" data-count-target="8.1" data-count-decimals="1" data-count-suffix="K visuals">0 visuals</span>
         </div>
         <div class="category__bottom">
           <span class="category__arrow">
@@ -556,7 +558,7 @@
       <div class="category__info">
         <div>
           <h3 class="category__name">Wildlife</h3>
-          <span class="category__count">9.3K visuals</span>
+          <span class="category__count" data-count-target="9.3" data-count-decimals="1" data-count-suffix="K visuals">0 visuals</span>
         </div>
         <div class="category__bottom">
           <span class="category__arrow">
@@ -575,7 +577,7 @@
       <div class="category__info">
         <div>
           <h3 class="category__name">Travel</h3>
-          <span class="category__count">15.6K visuals</span>
+          <span class="category__count" data-count-target="15.6" data-count-decimals="1" data-count-suffix="K visuals">0 visuals</span>
         </div>
         <div class="category__bottom">
           <p class="category__desc">New places.<br>New perspectives.</p>
@@ -595,7 +597,7 @@
       <div class="category__info">
         <div>
           <h3 class="category__name">Urban</h3>
-          <span class="category__count">10.2K visuals</span>
+          <span class="category__count" data-count-target="10.2" data-count-decimals="1" data-count-suffix="K visuals">0 visuals</span>
         </div>
         <div class="category__bottom">
           <p class="category__desc">Cities.<br>Stories. Everywhere.</p>
@@ -615,7 +617,7 @@
       <div class="category__info">
         <div>
           <h3 class="category__name">Ocean</h3>
-          <span class="category__count">7.8K visuals</span>
+          <span class="category__count" data-count-target="7.8" data-count-decimals="1" data-count-suffix="K visuals">0 visuals</span>
         </div>
         <div class="category__bottom">
           <p class="category__desc">Waves, horizons<br>and a calmer you.</p>
@@ -635,7 +637,7 @@
       <div class="category__info">
         <div>
           <h3 class="category__name">Abstract</h3>
-          <span class="category__count">6.1K visuals</span>
+          <span class="category__count" data-count-target="6.1" data-count-decimals="1" data-count-suffix="K visuals">0 visuals</span>
         </div>
         <div class="category__bottom">
           <p class="category__desc">Patterns, colors<br>and creative angles.</p>
@@ -655,7 +657,7 @@
       <div class="category__info">
         <div>
           <h3 class="category__name">Space</h3>
-          <span class="category__count">5.4K visuals</span>
+          <span class="category__count" data-count-target="5.4" data-count-decimals="1" data-count-suffix="K visuals">0 visuals</span>
         </div>
         <div class="category__bottom">
           <p class="category__desc">Beyond our world.</p>
@@ -737,7 +739,8 @@
           <rect x="3" y="14" width="7" height="7"></rect>
           <rect x="14" y="14" width="7" height="7"></rect>
         </svg>
-        <span class="about__stat-number">50+</span>
+        <span class="about__stat-number" data-count-target="50" data-count-suffix="+">0</span>
+<span class="about__stat-label">Categories</span>
         <span class="about__stat-label">Categories</span>
       </div>
 
@@ -983,6 +986,7 @@
   </div>
 </footer>
 
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 /* ===== Reset basics ===== */
 html {
-  scroll-behavior: smooth;
   scroll-padding-top: 90px; /* stops sections hiding under the fixed navbar */
 }
 * {
