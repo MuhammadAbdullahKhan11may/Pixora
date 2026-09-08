@@ -135,3 +135,18 @@ if (featuresSection) {
 
   featuresObserver.observe(featuresSection);
 }
+/* ===== Featured Photography — scroll-triggered entrance ===== */
+const featuredPhotoSection = document.querySelector('.featured-photography');
+
+if (featuredPhotoSection) {
+  const featuredPhotoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        featuredPhotoSection.classList.add('is-visible');
+        featuredPhotoObserver.unobserve(featuredPhotoSection);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  featuredPhotoObserver.observe(featuredPhotoSection);
+}

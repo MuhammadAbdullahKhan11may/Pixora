@@ -4,7 +4,39 @@
   padding: 100px 48px 40px;
   color: #ffffff;
 }
+/* Scroll-triggered entrance animations */
+@keyframes fpSlideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
+@keyframes fpSlideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fpSlideFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* Header */
 .featured-photography__header {
   display: flex;
@@ -105,9 +137,34 @@
   overflow: hidden;
   border-radius: 14px;
   cursor: pointer;
-  transform: scale(1);
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
   will-change: transform;
+  opacity: 0;
+}
+
+.featured-photography.is-visible .featured-photography__item--large {
+  animation: fpSlideFromLeft 0.9s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.featured-photography.is-visible .featured-photography__item--arch {
+  animation: fpSlideFromRight 0.9s ease forwards;
+  animation-delay: 0.25s;
+}
+
+.featured-photography.is-visible .featured-photography__item--fox {
+  animation: fpSlideFromRight 0.9s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.featured-photography.is-visible .featured-photography__item--urban {
+  animation: fpSlideFromBottom 0.9s ease forwards;
+  animation-delay: 0.55s;
+}
+
+.featured-photography.is-visible .featured-photography__item--astro {
+  animation: fpSlideFromBottom 0.9s ease forwards;
+  animation-delay: 0.7s;
 }
 
 .featured-photography__item:hover {
