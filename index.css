@@ -1,0 +1,249 @@
+/* ===== Reset basics ===== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* stops sections hiding under the fixed navbar */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #ffffff;
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: url('assets/images/hero-image.png') center center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 48px;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 10, 14, 0.55) 0%,
+    rgba(8, 10, 14, 0.25) 40%,
+    rgba(8, 10, 14, 0.75) 100%
+  );
+  z-index: 0;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding-top: 120px;
+}
+
+.hero__eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 20px;
+}
+
+.hero__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 3.4rem;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.hero__subtext {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+/* Search bar */
+.hero__search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(10, 12, 16, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding: 8px 8px 8px 24px;
+  max-width: 620px;
+  margin-bottom: 24px;
+}
+
+.hero__search-icon {
+  color: rgba(255, 255, 255, 0.7);
+  flex-shrink: 0;
+}
+
+.hero__search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  padding: 10px 0;
+}
+
+.hero__search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.hero__search-btn {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: none;
+  background: #ffffff;
+  color: #0a0c10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.hero__search-btn:hover {
+  background: #e8c873;
+}
+
+/* Popular tags */
+.hero__popular {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero__popular-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-right: 4px;
+}
+
+.hero__tag {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.hero__tag:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Footer row (stats + tagline) */
+.hero__footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 60px 0 56px;
+}
+
+.hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 32px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero__stat:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.hero__stat-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.hero__stat-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero__tagline {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: right;
+  position: relative;
+  padding-top: 20px;
+}
+
+.hero__tagline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .hero {
+    padding: 0 24px;
+  }
+
+  .hero__title {
+    font-size: 2.4rem;
+  }
+
+  .hero__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__tagline {
+    text-align: left;
+  }
+
+  .hero__tagline::before {
+    left: 0;
+    right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 1.9rem;
+  }
+
+  .hero__stats {
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .hero__stat {
+    padding-right: 20px;
+  }
+}

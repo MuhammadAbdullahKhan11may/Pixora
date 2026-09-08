@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixora — Stunning Photos & Videos for a More Inspired You</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="features.css">
+  <link rel="stylesheet" href="featured-photography.css">
+  <link rel="stylesheet" href="trending.css">
+  <link rel="stylesheet" href="category.css">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="explore.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo">PIXORA</a>
+
+      <ul class="navbar__links" id="navLinks">
+  <li><a href="#home" class="navbar__link" data-nav-link>Home</a></li>
+<li><a href="#featured" class="navbar__link" data-nav-link>Featured</a></li>
+  <li><a href="#trending" class="navbar__link" data-nav-link>Trending</a></li>
+<li><a href="#category" class="navbar__link" data-nav-link>Category</a></li>
+<li><a href="#about" class="navbar__link" data-nav-link>About</a></li>
+<li><a href="#explore" class="navbar__link" data-nav-link>Explore</a></li>
+<li><a href="#contact" class="navbar__link" data-nav-link>Contact</a></li>
+</ul>
+
+      <div class="navbar__actions">
+        <button class="navbar__icon-btn" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="navbar__signin">Sign In</button>
+
+        <button class="navbar__toggle" id="navToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Discover. Explore. Download.</p>
+      <h1 class="hero__title">Stunning Photography<br>for a More Inspired You</h1>
+      <p class="hero__subtext">
+        Explore a curated collection of high-quality photos and videos from around the world.
+        Find your next favorite photo or video.
+      </p>
+
+      <form class="hero__search">
+        <svg class="hero__search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" placeholder="Search photos, videos, categories or moods..." class="hero__search-input">
+        <button type="submit" class="hero__search-btn" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </form>
+
+      <div class="hero__popular">
+        <span class="hero__popular-label">Popular:</span>
+        <a href="#" class="hero__tag">Nature</a>
+        <a href="#" class="hero__tag">Travel</a>
+        <a href="#" class="hero__tag">Mountains</a>
+        <a href="#" class="hero__tag">City</a>
+        <a href="#" class="hero__tag">Animals</a>
+      </div>
+    </div>
+
+    <div class="hero__footer">
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-number">10K+</span>
+          <span class="hero__stat-label">High-Quality Photos</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">50+</span>
+          <span class="hero__stat-label">Photos & videos for every inspiration.</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">Free</span>
+          <span class="hero__stat-label">To Download</span>
+        </div>
+      </div>
+
+      <p class="hero__tagline">Captured by dreamers,<br>for everyone.</p>
+    </div>
+  </header>
+
+ <!-- Features Section -->
+<section class="features" id="featured">
+  <video class="features__video" autoplay muted loop playsinline>
+    <source src="assets/videos/video features section pixora.mp4" type="video/mp4">
+  </video>
+  <div class="features__overlay"></div>
+
+  <div class="features__content">
+    <div class="features__eyebrow">
+      <span class="features__eyebrow-line"></span>
+      <span>Why Pixora</span>
+      <span class="features__eyebrow-line"></span>
+    </div>
+
+    <h2 class="features__title">Visuals, without limits.</h2>
+    <p class="features__subtext">
+      Curated, high-quality photos and videos from around the world — made for explorers, creators and dreamers like you.
+    </p>
+
+    <div class="features__grid">
+      <div class="features__card">
+        <span class="features__number">01</span>
+        <h3 class="features__card-title">Curated Quality</h3>
+        <p class="features__card-text">Handpicked, high-resolution photography that inspires.</p>
+        <a href="#" class="features__card-link">
+          <span class="features__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+          Explore Collection
+        </a>
+      </div>
+
+      <div class="features__card">
+        <span class="features__number">02</span>
+        <h3 class="features__card-title">Diverse Categories</h3>
+        <p class="features__card-text">From serene landscapes to vibrant cities — find your mood.</p>
+        <a href="#" class="features__card-link">
+          <span class="features__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+          Browse Categories
+        </a>
+      </div>
+
+      <div class="features__card">
+        <span class="features__number">03</span>
+        <h3 class="features__card-title">Free to Download</h3>
+        <p class="features__card-text">High-quality images, easily accessible for everyone.</p>
+        <a href="#" class="features__card-link">
+          <span class="features__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+          Start Exploring
+        </a>
+      </div>
+    </div>
+
+    <div class="features__footer">
+      <span class="features__footer-line"></span>
+      <p class="features__footer-text">
+        More than photos<br>
+        <strong>A wider perspective</strong>
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Featured Photography Section -->
+<section class="featured-photography">
+  <div class="featured-photography__header">
+    <div class="featured-photography__header-text">
+      <p class="featured-photography__eyebrow">03 / Discover</p>
+      <h2 class="featured-photography__title">Featured <em>Photography</em></h2>
+      <p class="featured-photography__subtext">A curated selection of remarkable moments, places and perspectives.</p>
+    </div>
+
+    <div class="featured-photography__nav">
+      <p class="featured-photography__nav-text">Different stories.<br>A more beautiful world.</p>
+      <button class="featured-photography__arrow-btn" aria-label="Previous">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button class="featured-photography__arrow-btn" aria-label="Next">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="featured-photography__grid">
+
+    <div class="featured-photography__item featured-photography__item--large">
+      <img src="assets/images/featured-landscape.png" alt="Golden Reflections - Alpine Lake, Switzerland" class="featured-photography__img">
+      <div class="featured-photography__overlay"></div>
+      <div class="featured-photography__info">
+        <span class="featured-photography__number">01</span>
+        <span class="featured-photography__category">Landscape</span>
+        <h3 class="featured-photography__caption">Golden Reflections</h3>
+        <p class="featured-photography__location">Alpine Lake, Switzerland</p>
+      </div>
+    </div>
+
+    <div class="featured-photography__item featured-photography__item--arch">
+      <img src="assets/images/featured-architecture.png" alt="Timeless Elegance - Rome, Italy" class="featured-photography__img">
+      <div class="featured-photography__overlay"></div>
+      <div class="featured-photography__info">
+        <span class="featured-photography__number">02</span>
+        <span class="featured-photography__category">Architecture</span>
+        <h3 class="featured-photography__caption">Timeless Elegance</h3>
+        <p class="featured-photography__location">Rome, Italy</p>
+      </div>
+    </div>
+
+    <div class="featured-photography__item featured-photography__item--fox">
+      <img src="assets/images/featured-wildlife.png" alt="In Silent Focus - Hokkaido, Japan" class="featured-photography__img">
+      <div class="featured-photography__overlay"></div>
+      <div class="featured-photography__info">
+        <span class="featured-photography__number">03</span>
+        <span class="featured-photography__category">Wildlife</span>
+        <h3 class="featured-photography__caption">In Silent Focus</h3>
+        <p class="featured-photography__location">Hokkaido, Japan</p>
+      </div>
+    </div>
+
+    <div class="featured-photography__item featured-photography__item--urban">
+      <img src="assets/images/featured-urban.png" alt="City Nights - London, UK" class="featured-photography__img">
+      <div class="featured-photography__overlay"></div>
+      <div class="featured-photography__info">
+        <span class="featured-photography__number">04</span>
+        <span class="featured-photography__category">Urban</span>
+        <h3 class="featured-photography__caption">City Nights</h3>
+        <p class="featured-photography__location">London, UK</p>
+      </div>
+    </div>
+
+    <div class="featured-photography__item featured-photography__item--astro">
+      <img src="assets/images/featured-astronomy.png" alt="A Billion Stories - Atacama Desert, Chile" class="featured-photography__img">
+      <div class="featured-photography__overlay"></div>
+      <div class="featured-photography__info">
+        <span class="featured-photography__number">05</span>
+        <span class="featured-photography__category">Astronomy</span>
+        <h3 class="featured-photography__caption">A Billion Stories</h3>
+        <p class="featured-photography__location">Atacama Desert, Chile</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="featured-photography__footer">
+    <p class="featured-photography__tagline">
+      <span class="featured-photography__tagline-line"></span>
+      Beauty lives everywhere
+    </p>
+    <a href="#" class="featured-photography__cta">
+      Explore All Photography
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- Trending Section -->
+<section class="trending" id="trending">
+  <div class="trending__header">
+    <div class="trending__header-text">
+      <p class="trending__eyebrow">
+        <span class="trending__flame">🔥</span> Trending Now
+      </p>
+      <h2 class="trending__title">Videos people can't stop watching.</h2>
+      <p class="trending__subtext">Discover cinematic moments trending across Pixora.</p>
+    </div>
+
+    <div class="trending__nav">
+      <button class="trending__arrow-btn" id="trendPrev" aria-label="Previous">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button class="trending__arrow-btn" id="trendNext" aria-label="Next">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+      <span class="trending__counter"><span id="trendCurrent">01</span> / <span id="trendTotal">05</span></span>
+    </div>
+  </div>
+
+  <div class="trending__track" id="trendTrack">
+
+    <div class="trending__card">
+      <span class="trending__badge">#1 Trending</span>
+      <video class="trending__video" preload="metadata" playsinline muted loop>
+        <source src="assets/videos/video (1).mp4" type="video/mp4">
+      </video>
+      <button class="trending__play" aria-label="Play video">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20"></polygon></svg>
+      </button>
+      <div class="trending__info">
+        <span class="trending__category">Nature</span>
+        <h3 class="trending__card-title">Chasing the Last Light</h3>
+        <div class="trending__meta">
+          <span class="trending__location">Switzerland</span>
+          <span class="trending__duration">0:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="trending__card">
+      <video class="trending__video" preload="metadata" playsinline muted loop>
+        <source src="assets/videos/video (2).mp4" type="video/mp4">
+      </video>
+      <button class="trending__play" aria-label="Play video">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20"></polygon></svg>
+      </button>
+      <div class="trending__info">
+        <span class="trending__category">Ocean</span>
+        <h3 class="trending__card-title">Power of Nature</h3>
+        <div class="trending__meta">
+          <span class="trending__location">Big Sur, USA</span>
+          <span class="trending__duration">0:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="trending__card">
+      <video class="trending__video" preload="metadata" playsinline muted loop>
+        <source src="assets/videos/video (3).mp4" type="video/mp4">
+      </video>
+      <button class="trending__play" aria-label="Play video">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20"></polygon></svg>
+      </button>
+      <div class="trending__info">
+        <span class="trending__category">Urban</span>
+        <h3 class="trending__card-title">City Nights</h3>
+        <div class="trending__meta">
+          <span class="trending__location">Tokyo, Japan</span>
+          <span class="trending__duration">0:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="trending__card">
+      <video class="trending__video" preload="metadata" playsinline muted loop>
+        <source src="assets/videos/video (4).mp4" type="video/mp4">
+      </video>
+      <button class="trending__play" aria-label="Play video">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20"></polygon></svg>
+      </button>
+      <div class="trending__info">
+        <span class="trending__category">Wildlife</span>
+        <h3 class="trending__card-title">Wild &amp; Free</h3>
+        <div class="trending__meta">
+          <span class="trending__location">Yellowstone, USA</span>
+          <span class="trending__duration">0:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="trending__card">
+      <video class="trending__video" preload="metadata" playsinline muted loop>
+        <source src="assets/videos/video (5).mp4" type="video/mp4">
+      </video>
+      <button class="trending__play" aria-label="Play video">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20"></polygon></svg>
+      </button>
+      <div class="trending__info">
+        <span class="trending__category">Travel</span>
+        <h3 class="trending__card-title">Paradise Awaits</h3>
+        <div class="trending__meta">
+          <span class="trending__location">Palawan, Philippines</span>
+          <span class="trending__duration">0:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="trending__card">
+      <video class="trending__video" preload="metadata" playsinline muted loop>
+        <source src="assets/videos/video (6).mp4" type="video/mp4">
+      </video>
+      <button class="trending__play" aria-label="Play video">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20"></polygon></svg>
+      </button>
+      <div class="trending__info">
+        <span class="trending__category">Ocean</span>
+        <h3 class="trending__card-title">Beneath the Waves</h3>
+        <div class="trending__meta">
+          <span class="trending__location">Maldives</span>
+          <span class="trending__duration">0:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="trending__card">
+      <video class="trending__video" preload="metadata" playsinline muted loop>
+        <source src="assets/videos/video (7).mp4" type="video/mp4">
+      </video>
+      <button class="trending__play" aria-label="Play video">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20"></polygon></svg>
+      </button>
+      <div class="trending__info">
+        <span class="trending__category">Aerial</span>
+        <h3 class="trending__card-title">Above It All</h3>
+        <div class="trending__meta">
+          <span class="trending__location">Iceland</span>
+          <span class="trending__duration">0:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="trending__card">
+      <video class="trending__video" preload="metadata" playsinline muted loop>
+        <source src="assets/videos/video (8).mp4" type="video/mp4">
+      </video>
+      <button class="trending__play" aria-label="Play video">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20"></polygon></svg>
+      </button>
+      <div class="trending__info">
+        <span class="trending__category">Cinematic</span>
+        <h3 class="trending__card-title">Golden Hour</h3>
+        <div class="trending__meta">
+          <span class="trending__location">Santorini, Greece</span>
+          <span class="trending__duration">0:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="trending__card">
+      <video class="trending__video" preload="metadata" playsinline muted loop>
+        <source src="assets/videos/video (9).mp4" type="video/mp4">
+      </video>
+      <button class="trending__play" aria-label="Play video">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20"></polygon></svg>
+      </button>
+      <div class="trending__info">
+        <span class="trending__category">Nature</span>
+        <h3 class="trending__card-title">Whispering Pines</h3>
+        <div class="trending__meta">
+          <span class="trending__location">Banff, Canada</span>
+          <span class="trending__duration">0:00</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="trending__footer">
+    <div class="trending__progress-wrap">
+      <div class="trending__progress-track">
+        <div class="trending__progress-bar" id="trendProgress"></div>
+      </div>
+      <span class="trending__drag-label">Drag to explore</span>
+    </div>
+
+    <a href="#" class="trending__cta">
+      Explore All Videos
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- Category Section -->
+<section class="category" id="category">
+  <div class="category__header">
+    <div class="category__header-text">
+      <p class="category__eyebrow">05 / Explore</p>
+      <h2 class="category__title">Explore <span class="category__title-muted">by Category</span></h2>
+      <p class="category__subtext">Find exactly what inspires you.</p>
+      <p class="category__subtext category__subtext--light">Browse photos and videos across every world, mood and moment.</p>
+    </div>
+
+    <div class="category__nav">
+      <p class="category__nav-text">Different Perspectives<br>A More Inspired You</p>
+      <a href="#" class="category__cta">
+        View All Categories
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="category__grid">
+
+    <a href="#" class="category__card category__card--nature">
+      <img src="assets/images/category nature.jpg" alt="Nature" class="category__img">
+      <div class="category__overlay"></div>
+      <div class="category__info">
+        <div>
+          <h3 class="category__name">Nature</h3>
+          <span class="category__count">12.4K visuals</span>
+        </div>
+        <div class="category__bottom">
+          <p class="category__desc">Mountains, forests, lakes<br>and everything in between.</p>
+          <span class="category__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="category__card category__card--arch">
+      <img src="assets/images/category architecture.png" alt="Architecture" class="category__img">
+      <div class="category__overlay"></div>
+      <div class="category__info">
+        <div>
+          <h3 class="category__name">Architecture</h3>
+          <span class="category__count">8.1K visuals</span>
+        </div>
+        <div class="category__bottom">
+          <span class="category__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="category__card category__card--wild">
+      <img src="assets/images/category wildlife.png" alt="Wildlife" class="category__img">
+      <div class="category__overlay"></div>
+      <div class="category__info">
+        <div>
+          <h3 class="category__name">Wildlife</h3>
+          <span class="category__count">9.3K visuals</span>
+        </div>
+        <div class="category__bottom">
+          <span class="category__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="category__card category__card--travel">
+      <img src="assets/images/category travell.png" alt="Travel" class="category__img">
+      <div class="category__overlay"></div>
+      <div class="category__info">
+        <div>
+          <h3 class="category__name">Travel</h3>
+          <span class="category__count">15.6K visuals</span>
+        </div>
+        <div class="category__bottom">
+          <p class="category__desc">New places.<br>New perspectives.</p>
+          <span class="category__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="category__card category__card--urban">
+      <img src="assets/images/category urban.png" alt="Urban" class="category__img">
+      <div class="category__overlay"></div>
+      <div class="category__info">
+        <div>
+          <h3 class="category__name">Urban</h3>
+          <span class="category__count">10.2K visuals</span>
+        </div>
+        <div class="category__bottom">
+          <p class="category__desc">Cities.<br>Stories. Everywhere.</p>
+          <span class="category__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="category__card category__card--ocean">
+      <img src="assets/images/category ocean.png" alt="Ocean" class="category__img">
+      <div class="category__overlay"></div>
+      <div class="category__info">
+        <div>
+          <h3 class="category__name">Ocean</h3>
+          <span class="category__count">7.8K visuals</span>
+        </div>
+        <div class="category__bottom">
+          <p class="category__desc">Waves, horizons<br>and a calmer you.</p>
+          <span class="category__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="category__card category__card--abstract">
+      <img src="assets/images/category abstract.png" alt="Abstract" class="category__img">
+      <div class="category__overlay"></div>
+      <div class="category__info">
+        <div>
+          <h3 class="category__name">Abstract</h3>
+          <span class="category__count">6.1K visuals</span>
+        </div>
+        <div class="category__bottom">
+          <p class="category__desc">Patterns, colors<br>and creative angles.</p>
+          <span class="category__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="category__card category__card--space">
+      <img src="assets/images/category space.png" alt="Space" class="category__img">
+      <div class="category__overlay"></div>
+      <div class="category__info">
+        <div>
+          <h3 class="category__name">Space</h3>
+          <span class="category__count">5.4K visuals</span>
+        </div>
+        <div class="category__bottom">
+          <p class="category__desc">Beyond our world.</p>
+          <span class="category__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="category__card category__card--people">
+      <img src="assets/images/category people.png" alt="People" class="category__img">
+      <div class="category__overlay"></div>
+      <div class="category__info">
+        <div>
+          <h3 class="category__name">People</h3>
+          <span class="category__count">9.7K visuals</span>
+        </div>
+        <div class="category__bottom">
+          <p class="category__desc">Real moments.<br>Extraordinary stories.</p>
+          <span class="category__arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+  <div class="about__bg">
+    <img src="assets/images/about image.png" alt="Macro shot of moss, berries and a small flower on a tree trunk" class="about__bg-img">
+    <div class="about__bg-overlay"></div>
+  </div>
+
+  <span class="about__corner-label">More<br>Than<br>Images</span>
+
+  <div class="about__content">
+    <p class="about__eyebrow">
+      <span class="about__eyebrow-line"></span>
+      06 / About Pixora
+    </p>
+
+    <h2 class="about__title">
+      Built for<br>
+      <span class="about__title-muted">Visual Discovery.</span>
+    </h2>
+
+    <p class="about__text">
+      Pixora brings remarkable photography and video together in one place.
+      A space to explore new places, perspectives and moments from around the world.
+    </p>
+
+    <p class="about__text">
+      We believe in the power of visuals — to inspire, connect and make the world feel a little closer.
+    </p>
+
+    <a href="#" class="about__cta">
+      Discover Pixora
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+
+    <div class="about__stats">
+      <div class="about__stat">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+        </svg>
+        <span class="about__stat-number">50+</span>
+        <span class="about__stat-label">Categories</span>
+      </div>
+
+      <div class="about__stat">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <span class="about__stat-number">Photo + Video</span>
+        <span class="about__stat-label">Media</span>
+      </div>
+
+      <div class="about__stat">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+          <text x="12" y="14.5" font-size="6" text-anchor="middle" fill="currentColor" stroke="none">HD</text>
+        </svg>
+        <span class="about__stat-number">HD / 4K</span>
+        <span class="about__stat-label">Quality</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="about__footer">
+    <p class="about__footer-brand">
+      <span class="about__footer-line"></span>
+      Pixora
+    </p>
+    <p class="about__footer-tags">People &nbsp;·&nbsp; Places &nbsp;·&nbsp; Perspectives &nbsp;·&nbsp; Forever</p>
+  </div>
+</section>
+
+<!-- Explore Section -->
+<section class="explore" id="explore">
+  <div class="explore__overlay"></div>
+
+  <div class="explore__topbar">
+    <p class="explore__brand">
+      <span class="explore__brand-line"></span>
+      Pixora
+    </p>
+    <p class="explore__nav-tags">Explore &nbsp;·&nbsp; Capture &nbsp;·&nbsp; Belong</p>
+  </div>
+
+  <div class="explore__content">
+    <p class="explore__eyebrow">07 / Explore</p>
+    <h2 class="explore__title">
+      There's more<br>
+      <span class="explore__title-muted">to discover.</span>
+    </h2>
+    <p class="explore__subtext">
+      Thousands of moments.<br>
+      One place to explore them.
+    </p>
+
+    <div class="explore__actions">
+      <a href="#" class="explore__btn explore__btn--solid">
+        Explore Photos
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+      <a href="#" class="explore__btn explore__btn--outline">
+        Explore Videos
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="explore__footer">
+    <div class="explore__links">
+      <div class="explore__link">
+        <span class="explore__link-number">01</span>
+        <div class="explore__link-head">
+          <h3 class="explore__link-title">Photography</h3>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </div>
+        <p class="explore__link-desc">Explore still moments</p>
+      </div>
+
+      <div class="explore__link">
+        <span class="explore__link-number">02</span>
+        <div class="explore__link-head">
+          <h3 class="explore__link-title">Video</h3>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </div>
+        <p class="explore__link-desc">See stories in motion</p>
+      </div>
+
+      <div class="explore__link">
+        <span class="explore__link-number">03</span>
+        <div class="explore__link-head">
+          <h3 class="explore__link-title">Categories</h3>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </div>
+        <p class="explore__link-desc">Find your inspiration</p>
+      </div>
+
+      <div class="explore__link">
+        <span class="explore__link-number">04</span>
+        <div class="explore__link-head">
+          <h3 class="explore__link-title">Collections</h3>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </div>
+        <p class="explore__link-desc">Discover curated visuals</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact / Footer Section -->
+<footer class="site-footer" id="contact">
+  <div class="site-footer__overlay"></div>
+
+  <div class="site-footer__topbar">
+    <p class="site-footer__brand">
+      <span class="site-footer__brand-line"></span>
+      Pixora
+    </p>
+    <p class="site-footer__nav-tags">Capture &nbsp;·&nbsp; Explore &nbsp;·&nbsp; Belong</p>
+  </div>
+
+  <div class="site-footer__hero">
+    <p class="site-footer__eyebrow">Get in Touch</p>
+    <h2 class="site-footer__title">
+      Let's create<br>
+      <span class="site-footer__title-muted">a more visual world.</span>
+    </h2>
+    <p class="site-footer__subtext">
+      Have a question, collaboration idea, or just want to say hello?<br>
+      We'd love to hear from you.
+    </p>
+
+    <a href="#" class="site-footer__cta">
+      Contact Us
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+  </div>
+
+  <div class="site-footer__bottom">
+    <div class="site-footer__divider"></div>
+
+    <div class="site-footer__grid">
+      <div class="site-footer__col site-footer__col--brand">
+        <p class="site-footer__logo">Pixora</p>
+        <p class="site-footer__blurb">A home for photographers, filmmakers and visual explorers. Discover. Share. Be inspired.</p>
+        <div class="site-footer__socials">
+          <a href="#" class="site-footer__social" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"></circle>
+            </svg>
+          </a>
+          <a href="#" class="site-footer__social" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+              <polygon points="10 9 15 12 10 15 10 9" fill="currentColor" stroke="none"></polygon>
+            </svg>
+          </a>
+          <a href="#" class="site-footer__social" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="site-footer__social" aria-label="X (Twitter)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="4" y1="4" x2="20" y2="20"></line>
+              <line x1="20" y1="4" x2="4" y2="20"></line>
+            </svg>
+          </a>
+          <a href="#" class="site-footer__social" aria-label="Pinterest">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9 17c1-3 1.5-5 1.5-6.5a2.5 2.5 0 0 1 5 0c0 1.5-1 4-2.5 4-.7 0-1.2-.4-1.4-1"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="site-footer__col">
+        <h3 class="site-footer__col-title">Explore</h3>
+        <ul class="site-footer__links">
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#trending">Trending</a></li>
+          <li><a href="#category">Categories</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__col">
+        <h3 class="site-footer__col-title">Support</h3>
+        <ul class="site-footer__links">
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Help &amp; FAQ</a></li>
+          <li><a href="#">Community Guidelines</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__col site-footer__col--newsletter">
+        <h3 class="site-footer__col-title">Stay in the Loop</h3>
+        <p class="site-footer__blurb">Get updates, featured stories and new collections straight to your inbox.</p>
+        <form class="site-footer__form">
+          <input type="email" placeholder="Enter your email" class="site-footer__input" required>
+          <button type="submit" class="site-footer__submit" aria-label="Subscribe">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="site-footer__legal">
+      <p class="site-footer__copyright">© 2024 Pixora. All rights reserved.</p>
+      <p class="site-footer__tag">
+        More than images
+        <span class="site-footer__tag-line"></span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+/* ===== Category ===== */
+.category {
+  background: #0b0c10;
+  padding: 40px 48px 100px;
+  color: #ffffff;
+}
+
+.category__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1600px;
+  margin: 0 auto 40px;
+}
+
+.category__eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 12px;
+}
+
+.category__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.category__title-muted {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.category__subtext {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 520px;
+}
+
+.category__subtext--light {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 2px;
+}
+
+.category__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.category__nav-text {
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: right;
+}
+
+.category__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.category__cta:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+/* Grid */
+.category__grid {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 210px 210px 190px 210px;
+  grid-template-areas:
+    "nature nature arch wild"
+    "nature nature travel travel"
+    "urban ocean travel travel"
+    "abstract space people people";
+  gap: 18px;
+}
+
+.category__card--nature   { grid-area: nature; }
+.category__card--arch     { grid-area: arch; }
+.category__card--wild     { grid-area: wild; }
+.category__card--travel   { grid-area: travel; }
+.category__card--urban    { grid-area: urban; }
+.category__card--ocean    { grid-area: ocean; }
+.category__card--abstract { grid-area: abstract; }
+.category__card--space    { grid-area: space; }
+.category__card--people   { grid-area: people; }
+
+/* Card */
+.category__card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #ffffff;
+  transform: scale(1);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+  will-change: transform;
+}
+
+.category__card:hover {
+  transform: scale(1.045);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.category__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.category__card:hover .category__img {
+  transform: scale(1.1);
+}
+
+.category__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.1) 45%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+}
+
+.category__info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 22px;
+}
+
+.category__name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.category__count {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.category__bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.category__desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.category__arrow {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.category__card:hover .category__arrow {
+  background: #ffffff;
+  color: #0b0c10;
+  border-color: #ffffff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1100px) {
+  .category__grid {
+    grid-template-rows: 190px 190px 170px 190px;
+  }
+}
+
+@media (max-width: 800px) {
+  .category {
+    padding: 30px 24px 70px;
+  }
+
+  .category__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .category__nav {
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  .category__nav-text {
+    text-align: left;
+  }
+
+  .category__title {
+    font-size: 1.9rem;
+  }
+
+  .category__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    grid-template-areas:
+      "nature nature"
+      "arch wild"
+      "travel travel"
+      "urban ocean"
+      "abstract space"
+      "people people";
+  }
+
+  .category__card {
+    aspect-ratio: 4 / 3.2;
+  }
+
+  .category__card--nature,
+  .category__card--travel {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 480px) {
+  .category__grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nature"
+      "arch"
+      "wild"
+      "travel"
+      "urban"
+      "ocean"
+      "abstract"
+      "space"
+      "people";
+  }
+
+  .category__card,
+  .category__card--nature,
+  .category__card--travel {
+    aspect-ratio: 4 / 3;
+  }
+
+  .category__title {
+    font-size: 1.6rem;
+  }
+}
