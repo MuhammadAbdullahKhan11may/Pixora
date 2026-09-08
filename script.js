@@ -374,3 +374,18 @@ if (categorySection) {
 
   categoryObserver.observe(categorySection);
 }
+/* ===== Trending — scroll-triggered entrance ===== */
+const trendingSection = document.querySelector('.trending');
+
+if (trendingSection) {
+  const trendingObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        trendingSection.classList.add('is-visible');
+        trendingObserver.unobserve(trendingSection);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  trendingObserver.observe(trendingSection);
+}
